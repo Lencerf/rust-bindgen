@@ -95,7 +95,7 @@ pub trait ParseCallbacks: fmt::Debug {
     }
 
     /// Allows to rename an item, replacing `_original_item_name`.
-    fn item_name(&self, _original_item_name: &str) -> Option<String> {
+    fn item_name(&self, _original_item_name: &str, _kind: &str) -> Option<String> {
         None
     }
 

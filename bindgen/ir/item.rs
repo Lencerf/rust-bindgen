@@ -929,7 +929,7 @@ impl Item {
 
         let name = if opt.user_mangled == UserMangled::Yes {
             ctx.options()
-                .last_callback(|callbacks| callbacks.item_name(&name))
+                .last_callback(|callbacks| callbacks.item_name(&name, target.kind.kind_name()))
                 .unwrap_or(name)
         } else {
             name
